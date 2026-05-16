@@ -48,6 +48,15 @@ namespace ATMSystem
                 Console.Write("Enter Your Name: ");
                 string name = Console.ReadLine()!;
 
+                // FIX TC046 (Blank Name Validation)
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    Console.WriteLine("Invalid Name.");
+                    return; 
+                }
+
+                name = name.Trim();
+
                 Console.Write("Create PIN: ");
                 string newPin = Console.ReadLine()!;
 
@@ -610,7 +619,7 @@ namespace ATMSystem
                             if (amount <= 0)
                             {
                                 Console.WriteLine("Invalid Withdraw Amount!");
-                                return;
+                                continue;
                             }
 
                             if (amount <= loggedInAccount.Balnce)
