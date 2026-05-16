@@ -24,5 +24,9 @@ A complete ATM System developed in C# using .NET 8, Entity Framework Core, and S
 - Git
 - GitHub
 
+  ## Tests
+Manual test cases are available here:
+📁 tests/ATM-Test-Cases.md
+
 ## GitHub Repository
 https://github.com/mohammedalarabid/ATM-System
